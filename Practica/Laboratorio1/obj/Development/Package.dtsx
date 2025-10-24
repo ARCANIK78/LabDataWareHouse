@@ -1,0 +1,1082 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/10/2025 2:47:15 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-8EH4RFO"
+  DTS:CreatorName="DESKTOP-8EH4RFO\Arcani"
+  DTS:DTSID="{8387D43E-EDF4-43DA-8232-16C4A35AEC2B}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.2"
+  DTS:LocaleID="2058"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="20"
+  DTS:VersionGUID="{405C790F-73F8-4888-9236-038E213C8026}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones con Excel]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{C1DE1BEC-7D85-4BCF-8F59-D36503F48B6E}"
+      DTS:ObjectName="Administrador de conexiones con Excel">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\DELL\Downloads\colegio.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones con Excel 1]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{50F11560-4955-4D20-92D3-1D92DDF01431}"
+      DTS:ObjectName="Administrador de conexiones con Excel 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\DELL\Documents\Tareas de universidad\colegio.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones con Excel 2]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{4D1B919B-F465-4D29-9592-F796A3BDF12A}"
+      DTS:ObjectName="Administrador de conexiones con Excel 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=C:\Users\DELL\Documents\Tareas de universidad\colegio.xls;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones con Excel 3]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{3D5B1C56-C228-4204-B893-E733C7DEB56D}"
+      DTS:ObjectName="Administrador de conexiones con Excel 3">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\DELL\Documents\colegioDW.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-8EH4RFO\SQLEXPRESS.Colegio]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{5CD4A460-8809-41A0-84AC-4C626F9CED14}"
+      DTS:ObjectName="DESKTOP-8EH4RFO\SQLEXPRESS.Colegio">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-8EH4RFO\SQLEXPRESS;Initial Catalog=Colegio;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{5CD4A460-8809-41A0-84AC-4C626F9CED14}DESKTOP-8EH4RFO\SQLEXPRESS.Colegio;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-8EH4RFO\SQLEXPRESS.ColegioDW]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{EA68F2C2-680A-4789-8862-98E3CEC19C8C}"
+      DTS:ObjectName="DESKTOP-8EH4RFO\SQLEXPRESS.ColegioDW">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-8EH4RFO\SQLEXPRESS;Initial Catalog=ColegioDW;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{EA68F2C2-680A-4789-8862-98E3CEC19C8C}DESKTOP-8EH4RFO\SQLEXPRESS.ColegioDW;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{98683F98-1D83-4624-9E49-D1C9C3280E5C}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\DWBaseDeDatos"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="DWBaseDeDatos"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[DWBaseDeDatos]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\DWBaseDeDatos.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8EH4RFO\SQLEXPRESS.ColegioDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8EH4RFO\SQLEXPRESS.ColegioDW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\DWBaseDeDatos.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\DWBaseDeDatos.Inputs[OLE DB Destination Input].Columns[tipoadmision]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="tipoadmision"
+                      externalMetadataColumnId="Package\Data Flow Task\DWBaseDeDatos.Inputs[OLE DB Destination Input].ExternalColumns[tipoadmision]"
+                      lineageId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output].Columns[tipoadmision]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DWBaseDeDatos.Inputs[OLE DB Destination Input].Columns[id_estudiante]"
+                      cachedDataType="i4"
+                      cachedName="id_estudiante"
+                      externalMetadataColumnId="Package\Data Flow Task\DWBaseDeDatos.Inputs[OLE DB Destination Input].ExternalColumns[id_estudiante]"
+                      lineageId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output].Columns[id_estudiante]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DWBaseDeDatos.Inputs[OLE DB Destination Input].Columns[nombres]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="nombres"
+                      externalMetadataColumnId="Package\Data Flow Task\DWBaseDeDatos.Inputs[OLE DB Destination Input].ExternalColumns[nombres]"
+                      lineageId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output].Columns[nombres]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DWBaseDeDatos.Inputs[OLE DB Destination Input].Columns[apellidopat]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="apellidopat"
+                      externalMetadataColumnId="Package\Data Flow Task\DWBaseDeDatos.Inputs[OLE DB Destination Input].ExternalColumns[apellidopat]"
+                      lineageId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output].Columns[apellidopat]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DWBaseDeDatos.Inputs[OLE DB Destination Input].Columns[apellidomat]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="apellidomat"
+                      externalMetadataColumnId="Package\Data Flow Task\DWBaseDeDatos.Inputs[OLE DB Destination Input].ExternalColumns[apellidomat]"
+                      lineageId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output].Columns[apellidomat]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DWBaseDeDatos.Inputs[OLE DB Destination Input].Columns[ci]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ci"
+                      externalMetadataColumnId="Package\Data Flow Task\DWBaseDeDatos.Inputs[OLE DB Destination Input].ExternalColumns[ci]"
+                      lineageId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output].Columns[ci]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DWBaseDeDatos.Inputs[OLE DB Destination Input].Columns[telefono]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="telefono"
+                      externalMetadataColumnId="Package\Data Flow Task\DWBaseDeDatos.Inputs[OLE DB Destination Input].ExternalColumns[telefono]"
+                      lineageId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output].Columns[telefono]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DWBaseDeDatos.Inputs[OLE DB Destination Input].Columns[fechainscripcion]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="fechainscripcion"
+                      externalMetadataColumnId="Package\Data Flow Task\DWBaseDeDatos.Inputs[OLE DB Destination Input].ExternalColumns[fechainscripcion]"
+                      lineageId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output].Columns[fechainscripcion]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DWBaseDeDatos.Inputs[OLE DB Destination Input].Columns[carrera]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="carrera"
+                      externalMetadataColumnId="Package\Data Flow Task\DWBaseDeDatos.Inputs[OLE DB Destination Input].ExternalColumns[carrera]"
+                      lineageId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output].Columns[carrera]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DWBaseDeDatos.Inputs[OLE DB Destination Input].ExternalColumns[tipoadmision]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="tipoadmision" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DWBaseDeDatos.Inputs[OLE DB Destination Input].ExternalColumns[id_estudiante]"
+                      dataType="i4"
+                      name="id_estudiante" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DWBaseDeDatos.Inputs[OLE DB Destination Input].ExternalColumns[nombres]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="nombres" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DWBaseDeDatos.Inputs[OLE DB Destination Input].ExternalColumns[apellidopat]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="apellidopat" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DWBaseDeDatos.Inputs[OLE DB Destination Input].ExternalColumns[apellidomat]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="apellidomat" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DWBaseDeDatos.Inputs[OLE DB Destination Input].ExternalColumns[ci]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ci" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DWBaseDeDatos.Inputs[OLE DB Destination Input].ExternalColumns[telefono]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="telefono" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DWBaseDeDatos.Inputs[OLE DB Destination Input].ExternalColumns[fechainscripcion]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="fechainscripcion" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DWBaseDeDatos.Inputs[OLE DB Destination Input].ExternalColumns[carrera]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="carrera" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\DWBaseDeDatos.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\DWBaseDeDatos.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\DWBaseDeDatos.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\DWBaseDeDatos.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\DWBaseDeDatos.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\DWBaseDeDatos.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\DWExcelDB"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="DWExcelDB"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DWExcelDB]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\DWExcelDB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8EH4RFO\SQLEXPRESS.ColegioDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8EH4RFO\SQLEXPRESS.ColegioDW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\DWExcelDB.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\DWExcelDB.Inputs[OLE DB Destination Input].Columns[id_carrera]"
+                      cachedDataType="r8"
+                      cachedName="id_carrera"
+                      externalMetadataColumnId="Package\Data Flow Task\DWExcelDB.Inputs[OLE DB Destination Input].ExternalColumns[id_carrera]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[id_carrera]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DWExcelDB.Inputs[OLE DB Destination Input].Columns[carrera]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="carrera"
+                      externalMetadataColumnId="Package\Data Flow Task\DWExcelDB.Inputs[OLE DB Destination Input].ExternalColumns[carrera]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[carrera]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DWExcelDB.Inputs[OLE DB Destination Input].Columns[sede]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="sede"
+                      externalMetadataColumnId="Package\Data Flow Task\DWExcelDB.Inputs[OLE DB Destination Input].ExternalColumns[sede]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[sede]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DWExcelDB.Inputs[OLE DB Destination Input].ExternalColumns[id_carrera]"
+                      dataType="r8"
+                      name="id_carrera" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DWExcelDB.Inputs[OLE DB Destination Input].ExternalColumns[carrera]"
+                      dataType="wstr"
+                      length="255"
+                      name="carrera" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DWExcelDB.Inputs[OLE DB Destination Input].ExternalColumns[sede]"
+                      dataType="wstr"
+                      length="255"
+                      name="sede" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\DWExcelDB.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\DWExcelDB.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\DWExcelDB.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\DWExcelDB.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\DWExcelDB.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\DWExcelDB.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">carrera$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT        `carrera$`.id_carrera, `carrera$`.carrera, `sede$`.sede
+FROM            `sede$`, `carrera$`</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Administrador de conexiones con Excel 3]"
+                  connectionManagerRefId="Package.ConnectionManagers[Administrador de conexiones con Excel 3]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[id_carrera]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[id_carrera]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[id_carrera]"
+                      name="id_carrera"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[carrera]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[carrera]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[carrera]"
+                      name="carrera"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[sede]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[sede]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[sede]"
+                      name="sede"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[id_carrera]"
+                      dataType="r8"
+                      name="id_carrera" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[carrera]"
+                      dataType="wstr"
+                      length="255"
+                      name="carrera" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[sede]"
+                      dataType="wstr"
+                      length="255"
+                      name="sede" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[id_carrera]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[id_carrera]"
+                      name="id_carrera" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[carrera]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[carrera]"
+                      name="carrera" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[sede]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[sede]"
+                      name="sede" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\TablaColegio"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="TablaColegio"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[admisiones]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT        estudiantes.id_estudiante, personas.nombres, personas.apellidopat, personas.apellidomat, personas.ci, personas.telefono, estudiantes.fechainscripcion, carreras.carrera, admisiones.tipoadmision
+FROM            estudiantes INNER JOIN
+                         personas ON estudiantes.id_persona = personas.id_persona INNER JOIN
+                         estados ON estudiantes.idestado = estados.idestado INNER JOIN
+                         carreras ON estudiantes.idcarrera = carreras.idcarrera INNER JOIN
+                         admisiones ON estudiantes.id_tipoadmision = admisiones.id_tipoadmision</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\TablaColegio.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8EH4RFO\SQLEXPRESS.Colegio]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8EH4RFO\SQLEXPRESS.Colegio]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output].Columns[tipoadmision]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output].ExternalColumns[tipoadmision]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output].Columns[tipoadmision]"
+                      name="tipoadmision"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output].Columns[id_estudiante]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output].ExternalColumns[id_estudiante]"
+                      lineageId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output].Columns[id_estudiante]"
+                      name="id_estudiante"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output].Columns[nombres]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output].ExternalColumns[nombres]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output].Columns[nombres]"
+                      name="nombres"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output].Columns[apellidopat]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output].ExternalColumns[apellidopat]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output].Columns[apellidopat]"
+                      name="apellidopat"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output].Columns[apellidomat]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output].ExternalColumns[apellidomat]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output].Columns[apellidomat]"
+                      name="apellidomat"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output].Columns[ci]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output].ExternalColumns[ci]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output].Columns[ci]"
+                      name="ci"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output].Columns[telefono]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output].ExternalColumns[telefono]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output].Columns[telefono]"
+                      name="telefono"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output].Columns[fechainscripcion]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output].ExternalColumns[fechainscripcion]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output].Columns[fechainscripcion]"
+                      name="fechainscripcion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output].Columns[carrera]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output].ExternalColumns[carrera]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output].Columns[carrera]"
+                      name="carrera"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output].ExternalColumns[tipoadmision]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="tipoadmision" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output].ExternalColumns[id_estudiante]"
+                      dataType="i4"
+                      name="id_estudiante" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output].ExternalColumns[nombres]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="nombres" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output].ExternalColumns[apellidopat]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="apellidopat" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output].ExternalColumns[apellidomat]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="apellidomat" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output].ExternalColumns[ci]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ci" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output].ExternalColumns[telefono]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="telefono" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output].ExternalColumns[fechainscripcion]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="fechainscripcion" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output].ExternalColumns[carrera]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="carrera" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Error Output].Columns[id_estudiante]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Error Output].Columns[id_estudiante]"
+                      name="id_estudiante" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Error Output].Columns[nombres]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Error Output].Columns[nombres]"
+                      name="nombres" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Error Output].Columns[apellidopat]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Error Output].Columns[apellidopat]"
+                      name="apellidopat" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Error Output].Columns[apellidomat]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Error Output].Columns[apellidomat]"
+                      name="apellidomat" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Error Output].Columns[ci]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Error Output].Columns[ci]"
+                      name="ci" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Error Output].Columns[telefono]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Error Output].Columns[telefono]"
+                      name="telefono" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Error Output].Columns[fechainscripcion]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Error Output].Columns[fechainscripcion]"
+                      name="fechainscripcion" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Error Output].Columns[carrera]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Error Output].Columns[carrera]"
+                      name="carrera" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Error Output].Columns[tipoadmision]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Error Output].Columns[tipoadmision]"
+                      name="tipoadmision" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[Excel Source Output]"
+              endId="Package\Data Flow Task\DWExcelDB.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow Task\DWBaseDeDatos.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task\TablaColegio.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Data Flow Task"
+          TopLeft="122,82" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Data Flow Task\Excel Source"
+          TopLeft="150,70" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Data Flow Task\TablaColegio"
+          TopLeft="423,61" />
+        <NodeLayout
+          Size="134,42"
+          Id="Package\Data Flow Task\DWExcelDB"
+          TopLeft="172,214" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Data Flow Task\DWBaseDeDatos"
+          TopLeft="483,220" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Excel Source Output]"
+          TopLeft="219.5,112">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="19.5,102"
+              Start="0,0"
+              End="19.5,94.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,47"
+                    Point2="0,51"
+                    Point3="4,51" />
+                  <mssgle:LineSegment
+                    End="15.5,51" />
+                  <mssgle:CubicBezierSegment
+                    Point1="15.5,51"
+                    Point2="19.5,51"
+                    Point3="19.5,55" />
+                  <mssgle:LineSegment
+                    End="19.5,94.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="492.5,103">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="69.5,117"
+              Start="0,0"
+              End="69.5,109.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,54.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,54.5"
+                    Point2="0,58.5"
+                    Point3="4,58.5" />
+                  <mssgle:LineSegment
+                    End="65.5,58.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="65.5,58.5"
+                    Point2="69.5,58.5"
+                    Point3="69.5,62.5" />
+                  <mssgle:LineSegment
+                    End="69.5,109.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\DWExcelDB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\DWBaseDeDatos">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
