@@ -1,0 +1,116 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\DELL\\Documents\\Tareas de universidad\\Taller de base de datos\\Laboratorio\\Practica\\ProyectoMultidimensional-olap\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EA36AA24-B134-7375-D683-4019BFA72EC8}|ProyectoMultidimensional-olap.dwproj|C:\\Users\\DELL\\Documents\\Tareas de universidad\\Taller de base de datos\\Laboratorio\\Practica\\ProyectoMultidimensional-olap\\T Inventario.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{EA36AA24-B134-7375-D683-4019BFA72EC8}|ProyectoMultidimensional-olap.dwproj|solutionrelative:T Inventario.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA36AA24-B134-7375-D683-4019BFA72EC8}|ProyectoMultidimensional-olap.dwproj|C:\\Users\\DELL\\Documents\\Tareas de universidad\\Taller de base de datos\\Laboratorio\\Practica\\ProyectoMultidimensional-olap\\T Cliente.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{EA36AA24-B134-7375-D683-4019BFA72EC8}|ProyectoMultidimensional-olap.dwproj|solutionrelative:T Cliente.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA36AA24-B134-7375-D683-4019BFA72EC8}|ProyectoMultidimensional-olap.dwproj|C:\\Users\\DELL\\Documents\\Tareas de universidad\\Taller de base de datos\\Laboratorio\\Practica\\ProyectoMultidimensional-olap\\Dwautomax.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{EA36AA24-B134-7375-D683-4019BFA72EC8}|ProyectoMultidimensional-olap.dwproj|solutionrelative:Dwautomax.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA36AA24-B134-7375-D683-4019BFA72EC8}|ProyectoMultidimensional-olap.dwproj|C:\\Users\\DELL\\Documents\\Tareas de universidad\\Taller de base de datos\\Laboratorio\\Practica\\ProyectoMultidimensional-olap\\Dwautomax.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{EA36AA24-B134-7375-D683-4019BFA72EC8}|ProyectoMultidimensional-olap.dwproj|solutionrelative:Dwautomax.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 251,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "T Inventario.dim [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\DELL\\Documents\\Tareas de universidad\\Taller de base de datos\\Laboratorio\\Practica\\ProyectoMultidimensional-olap\\T Inventario.dim",
+              "RelativeDocumentMoniker": "T Inventario.dim",
+              "ToolTip": "C:\\Users\\DELL\\Documents\\Tareas de universidad\\Taller de base de datos\\Laboratorio\\Practica\\ProyectoMultidimensional-olap\\T Inventario.dim [Dise\u00F1o]",
+              "RelativeToolTip": "T Inventario.dim [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-16T02:16:16.084Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "T Cliente.dim [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\DELL\\Documents\\Tareas de universidad\\Taller de base de datos\\Laboratorio\\Practica\\ProyectoMultidimensional-olap\\T Cliente.dim",
+              "RelativeDocumentMoniker": "T Cliente.dim",
+              "ToolTip": "C:\\Users\\DELL\\Documents\\Tareas de universidad\\Taller de base de datos\\Laboratorio\\Practica\\ProyectoMultidimensional-olap\\T Cliente.dim [Dise\u00F1o]",
+              "RelativeToolTip": "T Cliente.dim [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-16T02:16:02.446Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Dwautomax.cube [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\DELL\\Documents\\Tareas de universidad\\Taller de base de datos\\Laboratorio\\Practica\\ProyectoMultidimensional-olap\\Dwautomax.cube",
+              "RelativeDocumentMoniker": "Dwautomax.cube",
+              "ToolTip": "C:\\Users\\DELL\\Documents\\Tareas de universidad\\Taller de base de datos\\Laboratorio\\Practica\\ProyectoMultidimensional-olap\\Dwautomax.cube [Dise\u00F1o]",
+              "RelativeToolTip": "Dwautomax.cube [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-16T02:11:31.981Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Dwautomax.dsv [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\DELL\\Documents\\Tareas de universidad\\Taller de base de datos\\Laboratorio\\Practica\\ProyectoMultidimensional-olap\\Dwautomax.dsv",
+              "RelativeDocumentMoniker": "Dwautomax.dsv",
+              "ToolTip": "C:\\Users\\DELL\\Documents\\Tareas de universidad\\Taller de base de datos\\Laboratorio\\Practica\\ProyectoMultidimensional-olap\\Dwautomax.dsv [Dise\u00F1o]",
+              "RelativeToolTip": "Dwautomax.dsv [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-16T02:10:04.136Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
